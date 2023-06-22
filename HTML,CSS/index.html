@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Review Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Csstest.css">
+</head>
+<body>
+    <h1>Anime Review Classifier</h1>
+    <form action="/predict" method="post">
+        
+        <label for="feature1">Rate the Story:</label>
+        <input type="text" name="feature1" id="feature1" required><br>
+        <label for="feature2">Rate the Animation:</label>
+        <input type="text" name="feature2" id="feature2" required><br>
+        <label for="feature3">Rate the OSTs:</label>
+        <input type="text" name="feature3" id="feature3" required><br>
+        <label for="feature4">Rate the Characters:</label>
+        <input type="text" name="feature4" id="feature4" required><br>
+        <label for="feature5">Rate the Enjoyment:</label>
+        <input type="text" name="feature5" id="feature5" required><br>
+        <label for="feature6">Overall rating:</label>
+        <input type="text" name="feature6" id="feature6" required><br>
+        
+        <input type="submit" value="Predict" id="predict-button">
+    </form>
+    
+{% if prediction_text %}
+    {% if float(prediction_text) == 0 %}
+        <h2>The anime is not good</h2>
+    {% else %}
+        <h2>The anime is good</h2>
+    {% endif %}
+{% endif %}
+
+
+</body>
+</html>
