@@ -10,6 +10,7 @@ after the data's been cleaned and visualized using Seaborn and Matplotlib, it wa
 
 # Flask and HTML
 After building the model, it was saved using the "pickle" library, and a Flask model was built where it took the entries of the user from an HTML webpage and used the random forest classifier to predict whether the anime was good or not good based on the different features entered.
+
 <img width="710" alt="2023-06-23" src="https://github.com/Sapphire9-7/Classify-Anime/assets/93841475/d8e78424-101e-4d6e-a484-5bfa9087e883">
 
 # Output
